@@ -5,3 +5,6 @@ authors = ["filiplazovic <lazoviccorp@gmail.com>"]
 edition = "2018"
 
 [dependencies]
+serde = "1.0.84"
+serde_derive = "1.0.84"
+serde_json = "1.0.35"

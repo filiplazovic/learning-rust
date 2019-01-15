@@ -16,6 +16,11 @@ mod bitwise_operations;
 mod list_compr;
 #[macro_use]
 mod hash_map;
+#[macro_use]
+extern crate serde_derive;
+
+extern crate serde;
+extern crate serde_json;
 
 fn macro_functions() {
     a_macro!(x => 10);
@@ -175,7 +180,12 @@ fn where_clauses() {
     Detector::detect_lector_collector(Lector { name: "3u32".to_string() });
 }
 
+// JSON
+// ------------------------------------------------------------------------------------------------
+
+mod json_encode_decode;
+use crate::json_encode_decode::do_stuff;
 
 fn main() {
-    where_clauses();
+    do_stuff();
 }
